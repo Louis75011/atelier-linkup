@@ -1,0 +1,137 @@
+[
+  {
+    "id": "aquilon",
+    "name": "Aquilon Traitement des Eaux",
+    "short": "Aquilon",
+    "stand": "Hall 2 - stand B14",
+    "activity": "Traitement des eaux industrielles et des eaux de process",
+    "brochures": [
+      {
+        "id": "aquilon-ultrafiltration",
+        "type": "Fiche produit",
+        "title": "Module d'ultrafiltration UF-Compact 40",
+        "sections": [
+          { "heading": "En bref", "text": "UF-Compact 40 est un module d'ultrafiltration sur skid pour les eaux de process et la réutilisation des eaux usées traitées. Il produit jusqu'à 40 m3 par heure avec une turbidité de sortie inférieure à 0,1 NTU." },
+          { "heading": "Points forts", "text": "Membranes en fibres creuses en PVDF, lavage à contre-courant automatique, encombrement réduit de 30 % par rapport à une filtration sur sable. Le skid est livré prêt à raccorder et se met en service en deux jours." },
+          { "heading": "Applications", "text": "Agroalimentaire, chimie fine, eaux de refroidissement, réutilisation des eaux usées (REUT) pour le lavage ou l'arrosage industriel." }
+        ]
+      },
+      {
+        "id": "aquilon-cas-laiterie",
+        "type": "Étude de cas",
+        "title": "Laiterie coopérative : -38 % d'eau prélevée",
+        "sections": [
+          { "heading": "Contexte", "text": "Une laiterie coopérative de l'ouest de la France prélevait 900 m3 d'eau de forage par jour, avec des restrictions préfectorales chaque été." },
+          { "heading": "Solution", "text": "Installation de deux modules UF-Compact 40 suivis d'une osmose inverse pour recycler les eaux de condensats de lait (eaux de vache) vers les tours de refroidissement et le nettoyage en place." },
+          { "heading": "Résultats", "text": "Prélèvement réduit de 38 % dès la première année, retour sur investissement en 3,5 ans, aucune interruption de production pendant les travaux." }
+        ]
+      },
+      {
+        "id": "aquilon-ft-osmose",
+        "type": "Fiche technique",
+        "title": "Osmose inverse OI-Pro : caractéristiques",
+        "sections": [
+          { "heading": "Performances", "text": "Débit de perméat de 5 à 60 m3 par heure, taux de conversion jusqu'à 80 %, rejet de sels supérieur à 98 %. Pression de service de 10 à 16 bar." },
+          { "heading": "Exploitation", "text": "Supervision à distance par automate, alarmes sur colmatage et conductivité, nettoyage chimique en place assisté. Consommation électrique typique de 0,6 kWh par m3." },
+          { "heading": "Maintenance", "text": "Remplacement des membranes tous les 5 à 7 ans selon la qualité de l'eau d'entrée. Contrat de maintenance préventive avec deux visites par an." }
+        ]
+      },
+      {
+        "id": "aquilon-conformite",
+        "type": "Fiche produit",
+        "title": "Analyse et conformité des rejets",
+        "sections": [
+          { "heading": "Offre", "text": "Diagnostic de vos rejets aqueux, bilan des flux de pollution (DCO, MES, azote, phosphore) et feuille de route pour respecter votre arrêté préfectoral." },
+          { "heading": "Livrables", "text": "Rapport de campagne de mesures sur 7 jours, recommandations chiffrées, priorisation des investissements et accompagnement pour le dossier auprès de l'agence de l'eau." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "voltaia",
+    "name": "Voltaïa Batteries Industrielles",
+    "short": "Voltaïa",
+    "stand": "Hall 1 - stand A07",
+    "activity": "Stockage d'énergie et batteries pour la logistique et l'industrie",
+    "brochures": [
+      {
+        "id": "voltaia-lfp-traction",
+        "type": "Fiche produit",
+        "title": "Batteries de traction LFP pour chariots",
+        "sections": [
+          { "heading": "En bref", "text": "Gamme de batteries lithium fer phosphate (LFP) de 24 à 80 V pour chariots élévateurs, transpalettes et nacelles. Remplacement direct des batteries plomb, sans salle de charge dédiée." },
+          { "heading": "Points forts", "text": "Charge d'opportunité pendant les pauses, plus de 3 500 cycles, aucun dégagement gazeux et aucun remplissage d'eau. Garantie de 7 ans ou 10 000 heures." },
+          { "heading": "Sécurité", "text": "Chimie LFP stable, système de gestion de batterie (BMS) avec coupure automatique, communication CAN avec le chariot." }
+        ]
+      },
+      {
+        "id": "voltaia-cas-entrepot",
+        "type": "Étude de cas",
+        "title": "Plateforme logistique : flotte de 60 chariots convertie",
+        "sections": [
+          { "heading": "Contexte", "text": "Un prestataire logistique exploitait 60 chariots au plomb en trois équipes, avec 120 batteries de rechange et une salle de charge de 400 m2." },
+          { "heading": "Solution", "text": "Passage en lithium LFP avec charge d'opportunité, bornes de charge réparties en bout d'allée et suivi de l'état de santé des batteries par télémétrie." },
+          { "heading": "Résultats", "text": "Suppression des batteries de rechange, salle de charge libérée pour le stockage, consommation électrique réduite de 22 %, retour sur investissement en 4 ans." }
+        ]
+      },
+      {
+        "id": "voltaia-ft-stockage",
+        "type": "Fiche technique",
+        "title": "Conteneur de stockage stationnaire VS-500",
+        "sections": [
+          { "heading": "Caractéristiques", "text": "Capacité utile de 500 kWh, puissance de 250 kW, rendement aller-retour de 92 %. Conteneur 20 pieds climatisé, détection et extinction incendie intégrées." },
+          { "heading": "Usages", "text": "Écrêtage des pointes de consommation, autoconsommation photovoltaïque, alimentation de secours et participation aux services réseau." },
+          { "heading": "Normes", "text": "Conformité IEC 62619 et UL 9540A, raccordement basse tension 400 V, pilotage par Modbus TCP ou API." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "calceo",
+    "name": "Calcéo Mortiers Techniques",
+    "short": "Calcéo",
+    "stand": "Hall 3 - stand C22",
+    "activity": "Mortiers et bétons techniques pour la réparation et le scellement",
+    "brochures": [
+      {
+        "id": "calceo-reparation",
+        "type": "Fiche produit",
+        "title": "Mortier de réparation structurale R4",
+        "sections": [
+          { "heading": "En bref", "text": "Mortier fibré de classe R4 selon la norme NF EN 1504-3, pour la réparation des bétons d'ouvrages d'art, de parkings et de sites industriels." },
+          { "heading": "Points forts", "text": "Application manuelle ou par projection, épaisseur de 10 à 50 mm par passe, résistance en compression supérieure à 55 MPa à 28 jours, faible retrait." },
+          { "heading": "Mise en œuvre", "text": "Préparer le support par hydrodécapage, saturer en eau la veille, appliquer entre 5 et 30 °C. Remise en service piétonne après 24 heures." }
+        ]
+      },
+      {
+        "id": "calceo-cas-quai",
+        "type": "Étude de cas",
+        "title": "Quai portuaire : réparation en milieu marin",
+        "sections": [
+          { "heading": "Contexte", "text": "Un quai en béton armé présentait des éclatements dus à la corrosion des armatures, avec une exposition au marnage et aux chlorures." },
+          { "heading": "Solution", "text": "Traitement des armatures, reconstitution au mortier R4 projeté et protection par revêtement anti-chlorures, en travaillant entre deux marées." },
+          { "heading": "Résultats", "text": "1 200 m2 réparés en 9 semaines, aucune fermeture complète du quai, durée de vie résiduelle estimée à 30 ans." }
+        ]
+      },
+      {
+        "id": "calceo-ft-scellement",
+        "type": "Fiche technique",
+        "title": "Mortier de calage et de scellement CG-80",
+        "sections": [
+          { "heading": "Caractéristiques", "text": "Mortier fluide sans retrait pour le calage de machines, de ponts roulants et de charpentes. Résistance en compression de 80 MPa à 28 jours, coulable jusqu'à 100 mm d'épaisseur." },
+          { "heading": "Mise en œuvre", "text": "Gâchage mécanique 3 minutes, coulage d'un seul côté pour chasser l'air, temps ouvert de 45 minutes à 20 °C." },
+          { "heading": "Conditionnement", "text": "Sacs de 25 kg, consommation de 2,1 kg par litre de vide à combler, conservation de 12 mois à l'abri de l'humidité." }
+        ]
+      },
+      {
+        "id": "calceo-sols",
+        "type": "Fiche produit",
+        "title": "Chapes et sols industriels à durcissement rapide",
+        "sections": [
+          { "heading": "En bref", "text": "Mortiers de ragréage et chapes à durcissement rapide pour sols d'entrepôts et d'ateliers, circulables par chariots après 24 heures." },
+          { "heading": "Points forts", "text": "Résistance à l'abrasion élevée, compatibilité avec les revêtements époxy, travaux possibles en site occupé par zones." }
+        ]
+      }
+    ]
+  }
+]
