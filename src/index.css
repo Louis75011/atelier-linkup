@@ -1,0 +1,88 @@
+@import '@fontsource/barlow/400.css';
+@import '@fontsource/barlow/500.css';
+@import '@fontsource/barlow/600.css';
+@import '@fontsource/barlow-condensed/600.css';
+@import '@fontsource/barlow-condensed/700.css';
+@import 'tailwindcss';
+
+/* Inspiration palette: anthracite + chartreuse, light greys. */
+@theme {
+  --font-sans: 'Barlow', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Barlow Condensed', 'Barlow', system-ui, sans-serif;
+
+  --color-ink: #1c1d1b;
+  --color-ink-2: #3a3c38;
+  --color-muted: #5c5f58;
+  --color-line: #d9dbd4;
+  --color-paper: #f4f5f1;
+  --color-card: #ffffff;
+  --color-lime: #bfd22b;
+  --color-lime-soft: #eef4c4;
+  --color-olive: #556100;
+
+  --color-hot: #a8321e;
+  --color-hot-soft: #fbe5e0;
+  --color-warm: #8a5a00;
+  --color-warm-soft: #fbefd2;
+  --color-cold: #2b5f86;
+  --color-cold-soft: #e1edf6;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px var(--color-lime);
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card rounded-xl border border-line p-4 sm:p-5;
+  }
+  .btn,
+  .btn-primary,
+  .btn-accent,
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 min-h-10;
+  }
+  .btn-primary {
+    @apply bg-ink text-white hover:bg-ink-2;
+  }
+  .btn-accent {
+    @apply bg-lime text-ink hover:bg-[#adbf1f];
+  }
+  .btn-ghost {
+    @apply border border-line bg-white text-ink hover:bg-paper;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-white px-3 py-1.5 text-sm text-ink hover:border-ink min-h-9;
+  }
+  .chip[aria-pressed='true'] {
+    @apply border-ink bg-ink text-white;
+  }
+  .field {
+    @apply block w-full rounded-lg border border-[#8d9088] bg-white px-3 py-2 text-base text-ink placeholder:text-[#6b6e66];
+  }
+  .label {
+    @apply mb-1 block text-sm font-semibold text-ink;
+  }
+  .eyebrow {
+    @apply font-display text-xs font-semibold uppercase tracking-[0.12em] text-olive;
+  }
+  .banner {
+    @apply flex gap-3 rounded-xl border border-ink/10 bg-lime-soft p-3 text-sm text-ink;
+  }
+}
