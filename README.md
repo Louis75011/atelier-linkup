@@ -1,8 +1,12 @@
 # atelier-linkup · démonstrateur
 
+**Démo en ligne : https://atelier-linkup.vercel.app**
+
+[![Tableau de bord du salon](docs/capture.png)](https://atelier-linkup.vercel.app)
+
 > **Démonstrateur - données fictives.** Exposants, visiteurs, clients et brochures sont inventés. Aucune clé d'API, aucun appel réseau sortant, aucun envoi réel : tout tourne dans le navigateur.
 
-Démo en ligne : https://louis75011.github.io/atelier-linkup/
+Copie de secours sur GitHub Pages : https://louis75011.github.io/atelier-linkup/
 
 ## Objet
 
@@ -51,8 +55,9 @@ Polices auto-hébergées via `@fontsource` (aucun appel à Google Fonts). Pictog
 - Vite 8, React 19, TypeScript, Tailwind CSS 4
 - MiniSearch (recherche plein texte locale), pdf-lib (PDF dans le navigateur, chargé à la demande)
 - Vitest (25 tests : recherche, score de qualification, déclinaison éditoriale, export CSV), oxlint
-- GitHub Actions → GitHub Pages (base `/atelier-linkup/`)
-- `noindex` dans la page et `robots.txt` qui interdit l'indexation
+- Vercel (production, base `/`) : `vercel.json` fixe le build pnpm et l'en-tête `X-Robots-Tag: noindex, nofollow`
+- GitHub Actions → GitHub Pages (base `/atelier-linkup/`, passée par la variable d'environnement `BASE_PATH`)
+- `noindex` dans la page et `robots.txt` qui interdit l'indexation (lu par les robots sur Vercel, à la racine du domaine)
 
 ```bash
 pnpm install
@@ -60,6 +65,7 @@ pnpm dev      # http://localhost:5173/atelier-linkup/
 pnpm test
 pnpm lint
 pnpm build && pnpm preview
+BASE_PATH=/atelier-linkup/ pnpm build   # build pour GitHub Pages
 ```
 
 Arborescence utile :
