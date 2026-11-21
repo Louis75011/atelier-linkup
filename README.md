@@ -21,11 +21,11 @@ Petite application web qui rend concrètes quatre pistes d'usage de l'IA pour un
 
 | Onglet | Contenu |
 |---|---|
-| Assistant de stand | 3 exposants fictifs (traitement des eaux, batteries industrielles, mortiers techniques), 3 à 4 brochures chacun en JSON (`src/data/exhibitors.json`). Conversation simulée, recherche locale MiniSearch, réponses à gabarit qui citent la brochure, qualification (secteur, projet, délai, rôle), choix des documents, coordonnées avec consentement RGPD. En sortie : fiche « connaître son visiteur » avec score chaud/tiède/froid, aperçu du courriel d'envoi et de la relance J+5 (Brevo simulé), bouton « Passer la main à un commercial ». PDF générés à la volée avec pdf-lib. |
+| Assistant de stand | 3 exposants fictifs (traitement des eaux, batteries industrielles, mortiers techniques), 3 à 4 brochures chacun en JSON (`src/data/exhibitors.json`). Conversation simulée, recherche locale MiniSearch, réponses à gabarit qui citent la brochure, qualification (secteur, projet, délai, rôle), choix des documents, coordonnées avec consentement RGPD. En sortie : fiche « connaître son visiteur » avec score chaud/tiède/froid, aperçu du courriel d'envoi et de la relance J+3 (Brevo simulé), bouton « Passer la main à un commercial ». PDF générés à la volée avec pdf-lib. |
 | Tableau de bord du salon | 25 visiteurs fictifs + ceux créés dans l'assistant. Filtres chaud/tiède/froid, brochures les plus demandées, courbe des contacts par heure (avec tableau de données), fiche détaillée, chronologie des relances, export CSV (séparateur `;`, BOM UTF-8, protection contre l'injection de formules). |
 | Plan éditorial multi-clients | 3 clients fictifs avec fiche de voix (ton, mots à privilégier, mots bannis, émojis, longueur). Déclinaison déterministe d'un article (exemple ou article collé) pour LinkedIn, X, Facebook et Instagram : phrases clés extraites par densité de mots clés et présence de chiffres, puis gabarits. Calendrier du mois, statuts Brouillon / À corriger / Validé, boutons Valider et Corriger. |
 | Formulaire qualifiant | 4 étapes (besoin, secteur et délai, budget, coordonnées et consentement). En sortie : fiche résumée, catégorie (Prioritaire, À qualifier par téléphone, Nurturing) et réponse proposée, à relire avant envoi. |
-| Garde-fous et architecture | RGPD (finalité, consentement, conservation, hébergement UE, clés hors du code, minimisation), validation humaine, choix du modèle selon l'usage (présentation neutre de Claude, Mistral et ChatGPT), schéma SVG de l'architecture. |
+| Garde-fous et architecture | RGPD (finalité, consentement, conservation, serveurs en France, clés hors du code, minimisation), validation humaine, choix du modèle selon l'usage (présentation neutre de Claude, Mistral et ChatGPT), schéma SVG de l'architecture. |
 
 L'état (visiteurs créés, plan éditorial) est gardé en mémoire et dans `localStorage` (lecture et écriture protégées par try/catch). Le bouton « Réinitialiser la démo » remet tout à zéro.
 
@@ -84,8 +84,8 @@ Ce que la démo simule, et ce qui le remplacerait :
 
 | Démo | Production |
 |---|---|
-| Index MiniSearch en mémoire | Base vectorielle hébergée dans l'UE (par exemple pgvector ou Qdrant), alimentée par le découpage des brochures PDF de chaque exposant |
-| Réponses à gabarit | Modèle de langage hébergé en Europe, contraint à citer la brochure et à renvoyer vers un commercial hors périmètre |
+| Index MiniSearch en mémoire | Base vectorielle hébergée en France (par exemple pgvector ou Qdrant), alimentée par le découpage des brochures PDF de chaque exposant |
+| Réponses à gabarit | Modèle de langage sur des serveurs en France, contraint à citer la brochure et à renvoyer vers un commercial hors périmètre |
 | Enchaînement codé dans l'interface | Workflow n8n : conversation, score, fiche CRM, préparation des courriels, journal des validations |
 | Courriels affichés | Brevo (envoi transactionnel immédiat des brochures, relances après validation humaine), désinscription en un clic |
 | `localStorage` | CRM de l'agence ou de l'exposant, conservation limitée et purge automatique |

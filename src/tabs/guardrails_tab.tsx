@@ -4,7 +4,7 @@ const RGPD = [
   ['Finalité', 'Les coordonnées servent à envoyer les documents demandés et à suivre la demande. Pas de revente, pas d’autre usage sans nouveau consentement.'],
   ['Consentement', 'Case non cochée par défaut, texte clair, preuve horodatée conservée dans le CRM. Désinscription en un clic dans chaque courriel.'],
   ['Durée de conservation', '3 ans au plus après le dernier contact pour un prospect, puis suppression ou anonymisation automatique par un workflow planifié.'],
-  ['Hébergement en Europe', 'Base documentaire, base vectorielle, n8n et modèle de langage hébergés dans l’Union européenne. Sous-traitants listés dans le registre des traitements.'],
+  ['Serveurs en France', 'Base documentaire, base vectorielle, n8n et modèle de langage hébergés sur des serveurs en France. Sous-traitants listés dans le registre des traitements.'],
   ['Clés hors du code', 'Les clés d’API vivent dans le coffre de n8n ou dans des variables d’environnement du serveur, jamais dans le dépôt ni dans le navigateur.'],
   ['Minimisation', 'Le modèle ne reçoit que la question et les extraits utiles des brochures. Les coordonnées ne lui sont jamais transmises.'],
 ]
@@ -23,7 +23,7 @@ const USAGES = [
   {
     usage: 'Données sensibles ou confidentielles',
     criteria: 'Lieu d’hébergement, absence de réutilisation des données pour l’entraînement, contrat de sous-traitance.',
-    advice: 'Privilégier un modèle hébergé dans l’UE ou auto-hébergé ; à défaut, ne transmettre que des extraits anonymisés.',
+    advice: 'Privilégier un modèle hébergé en France ou auto-hébergé ; à défaut, ne transmettre que des extraits anonymisés.',
   },
   {
     usage: 'Réponses sur une documentation (assistant de stand)',
@@ -55,7 +55,7 @@ export function GuardrailsTab() {
         <ol className="mt-4 grid gap-2 text-sm md:grid-cols-2">
           <li><strong>1. QR code</strong> - le visiteur scanne le code du stand et ouvre l’assistant sur son téléphone.</li>
           <li><strong>2. Assistant</strong> - dialogue, recherche dans la base documentaire, questions de qualification.</li>
-          <li><strong>3. Base documentaire</strong> - brochures découpées en passages, indexées dans une base vectorielle européenne.</li>
+          <li><strong>3. Base documentaire</strong> - brochures découpées en passages, indexées dans une base vectorielle hébergée en France.</li>
           <li><strong>4. n8n</strong> - orchestre les étapes : score, fiche CRM, préparation des courriels.</li>
           <li><strong>5. Validation humaine</strong> - un commercial relit les relances et les réponses sensibles avant tout envoi.</li>
           <li><strong>6. Brevo et CRM</strong> - envoi des brochures et des relances validées ; fiche visiteur à jour dans le CRM.</li>
@@ -148,7 +148,7 @@ function ArchitectureDiagram() {
 
       <Box x={20} y={50} w={130} title="QR code" sub="sur le stand" />
       <Box x={200} y={50} w={160} title="Assistant" sub="dialogue + qualification" accent />
-      <Box x={200} y={220} w={160} title="Base documentaire" sub="vectorielle, UE" />
+      <Box x={200} y={220} w={160} title="Base documentaire" sub="vectorielle, France" />
       <Box x={420} y={50} w={150} title="n8n" sub="orchestration" accent />
       <Box x={420} y={220} w={150} title="CRM" sub="fiche visiteur" />
       <Box x={630} y={50} w={200} title="Validation humaine" sub="relances et réponses" accent />
@@ -163,7 +163,7 @@ function ArchitectureDiagram() {
       <line x1={570} y1={82} x2={626} y2={82} stroke="#1c1d1b" strokeWidth="2" markerEnd={arrow} />
       <line x1={730} y1={114} x2={730} y2={216} stroke="#556100" strokeWidth="2.5" markerEnd={arrow} />
       <text x={738} y={170} fontSize="11.5" fontWeight="600" fill="#556100">après accord</text>
-      <text x={20} y={30} fontSize="12" fill="#5c5f58">Modèle de langage hébergé en Europe, clés d’API dans le coffre de n8n</text>
+      <text x={20} y={30} fontSize="12" fill="#5c5f58">Modèle de langage sur serveurs en France, clés d’API dans le coffre de n8n</text>
     </svg>
   )
 }

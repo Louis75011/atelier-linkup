@@ -19,16 +19,16 @@ export interface Voice {
 export const CLIENTS: Voice[] = [
   {
     id: 'brevalis',
-    name: 'Brevalis Robotique',
-    activity: 'Cellules robotisées pour PME',
+    name: 'Brevalis Industrie',
+    activity: 'Maintenance et efficacité énergétique des usines',
     tone: 'Enthousiaste et concret, orienté terrain',
-    prefer: ['atelier', 'opérateurs', 'productivité', 'concret'],
+    prefer: ['atelier', 'énergie', 'productivité', 'concret'],
     ban: { révolutionnaire: 'nouveau', disruptif: 'utile', 'game changer': 'vrai progrès', incroyable: 'notable' },
     emojis: true,
     length: 'moyen',
     tutoiement: false,
-    cta: 'Venez voir une cellule tourner dans notre atelier de démonstration.',
-    hashtags: ['Robotique', 'Industrie', 'PME'],
+    cta: 'Demandez un audit énergétique de votre atelier.',
+    hashtags: ['Industrie', 'Énergie', 'PME'],
     color: '#2f6f8f',
   },
   {

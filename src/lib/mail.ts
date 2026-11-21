@@ -53,7 +53,7 @@ export function followUpMail(
     from: `${name} <salon@exemple.invalid>`,
     to: v.email,
     subject: `Suite à votre visite - ${name}`,
-    when: 'J+5, après validation par un commercial',
+    when: 'J+3, après validation par un commercial',
     body: `Bonjour ${v.firstName},
 
 Avez-vous pu parcourir les documents reçus après le salon ?
@@ -68,7 +68,7 @@ L'équipe ${name}`,
 export function followUpPlan(temperature: Temperature): FollowUp[] {
   const plan: FollowUp[] = [
     { day: 0, label: 'Envoi des brochures', status: 'envoyé' },
-    { day: 5, label: 'Relance personnalisée', status: 'en attente de validation' },
+    { day: 3, label: 'Relance personnalisée', status: 'en attente de validation' },
   ]
   if (temperature !== 'froid') plan.push({ day: 12, label: 'Retour d’expérience ciblé', status: 'programmé' })
   if (temperature === 'chaud') plan.push({ day: 1, label: 'Appel commercial', status: 'programmé' })

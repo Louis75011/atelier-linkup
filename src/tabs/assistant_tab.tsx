@@ -211,7 +211,7 @@ export function AssistantTab({ visitors, onLead, onHandOff, onSeeDashboard }: Pr
       <div className="banner" role="note">
         <IconInfo className="mt-0.5 shrink-0" />
         <p>
-          Démonstration hors ligne : la recherche est un simple index local et les réponses suivent des gabarits. En production, la recherche passerait par une base vectorielle et un modèle de langage hébergé en Europe, orchestrés par n8n.
+          Démonstration hors ligne : la recherche est un simple index local et les réponses suivent des gabarits. En production, la recherche passerait par une base vectorielle et un modèle de langage sur des serveurs en France, orchestrés par n8n.
         </p>
       </div>
 
@@ -408,7 +408,7 @@ export function AssistantTab({ visitors, onLead, onHandOff, onSeeDashboard }: Pr
       {step === 'done' && lead && (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <MailPreviewCard title="Courriel d'envoi (immédiat)" mail={deliveryMail(lead)} />
-          <MailPreviewCard title="Relance à J+5" mail={followUpMail(lead, lead.temperature)} />
+          <MailPreviewCard title="Relance à J+3" mail={followUpMail(lead, lead.temperature)} />
         </div>
       )}
     </div>
